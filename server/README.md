@@ -1,2 +1,2 @@
-#To Start Server
+# Server Side
 npm start (To start backend server)
