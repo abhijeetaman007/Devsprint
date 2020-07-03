@@ -20,7 +20,10 @@ router.post('/add',async (req,res)=>{
         Country:req.body.country,
         Awards:req.body.awards,
         Type:req.body.type,
-        imdbID:req.body.imdbid
+        imdbID:req.body.imdbid,
+        Likes:req.body.likes,
+        Dislikes:req.body.dislikes,
+        Totalviews:req.body.totalviews
     })
     try{
         const savedmovie= await movie.save();
@@ -148,7 +151,10 @@ router.patch('/update/:title',async (req,res)=>{
                 Country:req.body.country,
                 Awards:req.body.awards,
                 Type:req.body.type,
-                imdbID:req.body.imdbid
+                imdbID:req.body.imdbid,
+                Likes:req.body.likes,
+                Dislikes:req.body.dislikes,
+                Totalviews:req.body.totalviews
             },
         })
         res.json(updatedmovie)

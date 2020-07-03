@@ -67,6 +67,18 @@ const movieSchema=mongoose.Schema({
         imdbID:{
             type:String,
             default:"Unknown"
+        },
+        Likes:{
+            type:Number,
+            default: 0
+        },
+        Dislikes:{
+            type:Number,
+            default: 0
+        },
+        Totalviews:{
+            type:Number,
+            default: 0            
         }
 })
 
