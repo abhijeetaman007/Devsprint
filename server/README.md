@@ -19,7 +19,7 @@ http://localhost:5000/movies/delete/movieid/:movieid	(To delete movie by _id)<br
 http://localhost:5000/movies/delete/title/:title	(To delete movie by its title)<br>
 http://localhost:5000/movies/update/:title              (To update details by its title)<br>
 
-Example json
+### Example json<br>
 {
 	"title": "Avengers: Infinity War",
 	"year": "2018",
