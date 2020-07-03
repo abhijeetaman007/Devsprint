@@ -36,7 +36,7 @@ http://localhost:5000/movies/update/:title              (To update details by it
 	"awards": "Nominated for 1 Oscar. Another 46 wins & 73 nominations.",
 	"imdbID": "tt4154756",
 	"type": "movie",
-	"likes":10,
-	"dislikes":5,
-	"totalviews":15
+	"likes":0,
+	"dislikes":0,
+	"totalviews":0
 }

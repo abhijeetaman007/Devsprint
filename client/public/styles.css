@@ -43,19 +43,23 @@
   .search{
       margin: 20px;
       text-align: center;
+      font-size: 2rem;
+      font-weight: bold;
   }
   input{
     width: 100%;
   }
   input[type=text] {
-    width: 100%;
+    width: 50%;
     padding: 12px 20px;
     margin: 8px 0;
+    margin-bottom: 10px;
     box-sizing: border-box;
     background-color: #ccc;
     color: white;
     font-size: large;
   }
+
   .rate{
     display: flex;
     align-items: stretch;
