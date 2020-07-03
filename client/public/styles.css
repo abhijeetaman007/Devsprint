@@ -56,4 +56,11 @@
     color: white;
     font-size: large;
   }
-  
+  .rate{
+    display: flex;
+    align-items: stretch;
+    margin:5px;
+  }
+  button{
+    margin: 5px;
+  }

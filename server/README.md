@@ -1,2 +1,5 @@
 # Server Side
-npm start (To start backend server)
+
+Run ```cd server```
+Run ```npm i```(installing packages)
+Run ```npm start``` (To start backend server)
