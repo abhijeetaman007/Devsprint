@@ -4,7 +4,7 @@ Run ```cd server```
 <br>Run ```npm i```(installing packages)
 <br>Run ```npm start``` (To start backend server)
 <br>
-###Routes
+### Routes
 <br>
 
 http://localhost:5000/movies/add                 	(To add a movie to Database)<br>
