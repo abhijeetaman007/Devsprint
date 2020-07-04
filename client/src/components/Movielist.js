@@ -8,7 +8,7 @@ export default function Movielist(props) {
                 <div className='col s12'>
                     {
                         props.movies.map((movie,i)=>{
-                            return <Movie key={i} image={movie.Poster}/>
+                            return <Movie key={i} movieInfo={props.movieInfo} movieid={movie.id} image={movie.poster_path}/>
                         })
                     }
                 </div>
