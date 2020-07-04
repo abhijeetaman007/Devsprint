@@ -4,8 +4,8 @@ Run ```npm i``` <br>
 Run ```npm start```<br>
 
 # Tech used
-HTML
-Materialised CSS framework
-JS
-REEACT
+HTML<br>
+Materialised CSS framework<br>
+JS<br>
+REACT
 
