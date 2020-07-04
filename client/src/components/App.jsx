@@ -1,57 +1,63 @@
-import React, {useState} from 'react'
-import Profile from "./Profile";
+import React, { Component } from "react";
 import Header from "./Header";
+const q = "harry+potter";
+export default class App extends Component {
 
-//so the search item is stored in 'sub'
+  constructor(props) {
+    super(props);
+    this.state = {
+      moviesData: [],
+    };
+  }
 
-export default function App() {
-    const [name,setName]=useState("");
-    const [sub,setSub]=useState("");
-
-    function handleChange(event){
-        //console.log(event.target.value);
-        setName(event.target.value)
+  async componentWillMount() {
+    try {
+      const response = await fetch(
+        "http://www.omdbapi.com/?t=" + q + "&apikey=3da5a3c2"
+      );
+      const data = await response.json();
+      this.setState(() => ({
+        moviesData: data,
+      }));
+    } catch (error) {
+      console.log("Error in fetching data");
     }
-    function handleClick(){
-        setSub(name)
-        setName("")
-    }
-    
+  }
+
+  render() {
+    const { Title, Year, Poster } = this.state.moviesData;
+    const ans=this.state.name
     return (
-        <div>
-        <Header/>
-            <div className='search'>
-            
-            <p>
-            <input type='text' placeholder='eg:harry+potter' onChange= {handleChange} value={name}></input> 
-           <button onClick={handleClick}>Submit</button>
-            </p>
-            <p>Movie Query just to check:{sub}</p>
-            
-           
+      <div>
+        <Header />
+        
+        <div className="search">
+          <p>
+            <input
+              type="text"
+              placeholder="Please enter movie name"
+              onChange={() => {
+                this.props.handleChange();
+              }}
+              value={this.props.name}
+            ></input>
+            <button
+              onClick={() => {
+                this.props.whenClicked();
+              }}
+            >
+              Submit
+            </button>
+          </p>
         </div>
-            <Profile/>
-            </div>
-    )
+
+
+        <div className="container">
+          <h3>{Title}</h3>
+          <h3>{Year}</h3>
+          <img src={Poster} alt="character" />
+        </div>
+      </div>
+    );
+  }
 }
-
-//for db part needed
-
-// import React from 'react'
-// import Header from "./Header";
-// import Movie from './useless/Movie';
-// import Search from "./useless/Search";
-// import movies from "./useless/movies";
-// function createmovie(x){
-//     return <Movie name={x.name} title={x.title}/>
-// }
-// function App() {
-//     return (
-//         <div>
-//             <Header/>
-//             <Search/>
-//             {movies.map(createmovie)}
-//         </div>
-//     )
-// }
-// export default App;
