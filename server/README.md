@@ -21,22 +21,20 @@ http://localhost:5000/movies/update/:title              (To update details by it
 
 ### Example json<br>
 {
-	"title": "Avengers: Infinity War",
-	"year": "2018",
-	"rated": "PG-13",
-	"runtime": "149 min",
-	"genre": "Action, Adventure, Sci-Fi",
-	"director": "Anthony Russo, Joe Russo",
-	"writer": "Christopher Markus (screenplay by), Stephen McFeely (screenplay by), Stan Lee (based on the Marvel comics by), Jack Kirby (based on the Marvel comics by), Joe Simon (Captain America created by), Jack Kirby (Captain America created by), Steve Englehart (Star-Lord created by), Steve Gan (Star-Lord created by), Bill Mantlo (Rocket Raccoon created by), Keith Giffen (Rocket Raccoon created by), Jim Starlin (Thanos,  Gamora and Drax created by), Stan Lee (Groot created by), Larry Lieber (Groot created by), Jack Kirby (Groot created by), Steve Englehart (Mantis created by), Don Heck (Mantis created by)",
-	"production": "Walt Disney Pictures",
-	"actors": "Robert Downey Jr., Chris Hemsworth, Mark Ruffalo, Chris Evans",
-	"plot": "The Avengers and their allies must be willing to sacrifice all in an attempt to defeat the powerful Thanos before his blitz of devastation and ruin puts an end to the universe.",
-	"language": "English",
-	"country": "USA",
-	"awards": "Nominated for 1 Oscar. Another 46 wins & 73 nominations.",
-	"imdbID": "tt4154756",
-	"type": "movie",
-	"likes":0,
-	"dislikes":0,
-	"totalviews":0
+	"Title": "Venom",
+	"Year": "2018",
+	"Rated": "PG-13",
+	"Runtime": "112 min",
+	"Genre": "Action, Adventure, Sci-Fi, Thriller",
+	"Director": "Ruben Fleischer",
+	"Writer": "Jeff Pinkner (screenplay by), Scott Rosenberg (screenplay by), Kelly Marcel (screenplay by), Jeff Pinkner (screen story by), Scott Rosenberg (screen story by), Todd McFarlane (Marvel's Venom Character created by), David Michelinie (Marvel's Venom Character created by)",
+	"Actors": "Tom Hardy, Michelle Williams, Riz Ahmed, Scott Haze",
+	"Plot": "A failed reporter is bonded to an alien entity, one of many symbiotes who have invaded Earth. But the being takes a liking to Earth and decides to protect it.",
+	"Language": "English, Mandarin, Malay",
+	"Country": "China, USA",
+	"Awards": "3 wins & 9 nominations.",
+	"Poster": "https://m.media-amazon.com/images/M/MV5BNzAwNzUzNjY4MV5BMl5BanBnXkFtZTgwMTQ5MzM0NjM@._V1_SX300.jpg",
+	"imdbID": "tt1270797",
+	"Type": "movie",
+	"Production": "Columbia Pictures"
 }

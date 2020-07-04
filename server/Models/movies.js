@@ -1,70 +1,74 @@
 const mongoose =require('mongoose')
 
 const movieSchema=mongoose.Schema({
-        Title:{
+        title:{
             type:String,
             require:true,
             trim:true,
         },
-        Year:{
+        year:{
             type:String,
             default:"Year not known"
         },
-        Rated:{
+        rated:{
             type:String,
             default:"Unknown"
         },
-        Runtime:{
+        runtime:{
             type:String,
             default:"Unknown"
         },
-        Genre:{
+        genre:{
             type:String,
             default:"Unknown"
         },
-        Director:{
+        director:{
             type:String,
             default:"Unknown",
             trim: true
         },
-        Writer:{
+        writer:{
             type:String,
             default:"Unknown",
             trim: true
         },
-        Production:{
+        production:{
             type:String,
             default:"Unknown",
             trim: true
         },
-        Actors:{
+        actors:{
             type:String,
             default:"Unknown",
             trim: true
         },
-        Plot:{
+        plot:{
             type:String,
             default:"Unknown",
         },
-        Language:{
-            type:String,
-            default:"Unknown",
-            trim: true
-        },
-        Country:{
+        language:{
             type:String,
             default:"Unknown",
             trim: true
         },
-        Awards:{
+        country:{
+            type:String,
+            default:"Unknown",
+            trim: true
+        },
+        awards:{
             type:String,
             default:"No awards",
         },
-        Type:{
+        poster:{
+            type:String,
+            default:"No Poster"
+        },
+        type:{
             type:String,
             default:"Unknown",
         },
-        imdbID:{
+        ImdbID:{
             type:String,
             default:"Unknown"
         },

@@ -3,6 +3,7 @@ const app=express()
 const mongoose=require('mongoose')
 const bodyparser=require('body-parser')
 const moviesroute=require('./Routes/movies')
+const fetchmoviesroute=require('./Routes/fetchmovie')
 
 //Middleware-to get post request body in Json
 app.use(bodyparser.json())
@@ -22,9 +23,10 @@ app.get("/",(req,res)=>{
 //Middleware for movies
 app.use('/movies',moviesroute)
 
+//Middleware for fetching movies to db
+app.use('/fetchmovies',fetchmoviesroute)
 
 //Listening at post 5000
 app.listen(5000,()=>{
     console.log("Server is up and running at port 5000")
 })
- 
