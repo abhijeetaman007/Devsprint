@@ -12,7 +12,7 @@ class App extends Component {
       <div>
         <nav className="navbar navbar-expand-lg navbar navbar-dark bg-dark">
 
-          <Link to="/" className="navbar-brand" style={{fontFamily: 'Bangers',fontSize:"2rem"}}> MOVE @ EASE </Link>
+          <Link to="/" className="navbar-brand" style={{fontFamily: 'Bangers',fontSize:"2rem"}}> MOViE @ eASE </Link>
 
           <div className="collpase navbar-collapse">
 
@@ -23,10 +23,10 @@ class App extends Component {
               </li>
 
               <li className="navbar-item">
-                <Link to="/create" className="nav-link" style={{fontFamily:"Helvetica",color:"white"}}>❤️ADD MOVIES❤️</Link>
+                <Link to="/create" className="nav-link" style={{fontFamily:"Helvetica",color:"white"}}>ADD MOVIES</Link>
               </li>
               <li className="navbar-item">
-                <Link to="/viewall" className="nav-link" style={{fontFamily:"Helvetica",color:"white"}}>❤️VIEW ALL ADDED❤️</Link>
+                <Link to="/viewall" className="nav-link" style={{fontFamily:"Helvetica",color:"white"}}>❤️VIEW ADDED MOVIES❤️</Link>
               </li>
               
             </ul>

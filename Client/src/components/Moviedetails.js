@@ -5,7 +5,7 @@ const Moviedetails = (props) => {
         <div>
             <div className="container">
                 <div className="row" onClick={props.goBack} style={{cursor: "pointer", paddingTop: 50}}>
-                    <span style={{marginLeft: 10}}>Go back</span>
+                    <span style={{margin: "50",fontSize:"2rem",fontWeight:"bold"}}>Go back</span>
                 </div>
                 <div className="row">
                     <div className="col s12 m4">

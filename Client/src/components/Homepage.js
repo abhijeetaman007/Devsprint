@@ -5,7 +5,6 @@ import Moviedetails from "./Moviedetails.js";
 import Upcoming from "./UpcomingList";
 import NowPlaying from "./NowPlaying";
 import TopRated from "./Toprated";
-import AddedMovies from "./AddedMovies";
 export default class Homepage extends Component {
 
   constructor(props) {
@@ -76,7 +75,6 @@ export default class Homepage extends Component {
       <Upcoming handleUpcoming={this.handleUpcoming}/>
       <NowPlaying handleNowplaying={this.handleNowplaying}/>
       <TopRated handleToprated={this.handleToprated}/>
-      <AddedMovies/>
       <div>
       {this.state.currmovie==null ?
       <div>

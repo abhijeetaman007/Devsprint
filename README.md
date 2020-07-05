@@ -1,8 +1,7 @@
-# Devsprint
-# Movie management and recommendation system.
-
+# MOViE @ eASE
+# Movie Management and Recommendation System
 --Searching for a movie.<br>
---Filtering movies according to a given criteria.<br>
+--Access to most toprated,currently playing and upcoming movies by a click of a button<br>
 --Details about all the movies.<br>
-
-Rating system for movies (optional)
+--Adding movies possible from frontend.<br>
+--Filtering movies according to a given criteria.<br>
