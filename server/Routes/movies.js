@@ -20,9 +20,9 @@ router.post('/add',async (req,res)=>{
         language:req.body.language,
         country:req.body.country,
         awards:req.body.awards,
-        poster:req.body.poster,
-        type:req.body.type,
-        ImdbID:req.body.imdbid,
+        //poster:req.body.poster,
+        //type:req.body.type,
+        ImdbID:req.body.ImdbID,
         
     })
     try{
@@ -151,7 +151,7 @@ router.patch('/update/:title',async (req,res)=>{
                 Language:req.body.language,
                 Country:req.body.country,
                 Awards:req.body.awards,
-                Type:req.body.type,
+                //Type:req.body.type,
                 imdbID:req.body.imdbid,
                 //Likes:req.body.likes,
                 //Dislikes:req.body.dislikes,

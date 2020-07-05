@@ -60,14 +60,14 @@ const movieSchema=mongoose.Schema({
             type:String,
             default:"No awards",
         },
-        poster:{
-            type:String,
-            default:"No Poster"
-        },
-        type:{
-            type:String,
-            default:"Unknown",
-        },
+        // poster:{
+        //     type:String,
+        //     default:"No Poster"
+        // },
+        // type:{
+        //     type:String,
+        //     default:"Unknown",
+        // },
         ImdbID:{
             type:String,
             default:"Unknown"

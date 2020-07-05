@@ -4,6 +4,7 @@ import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import Homepage from "./components/Homepage"
 import Addmovie from "./components/Addmovie"
 import Viewallmovies from "./components/Viewallmovies"
+import './style.css'
 
 class App extends Component {
   render() {

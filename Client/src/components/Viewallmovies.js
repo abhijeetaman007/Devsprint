@@ -19,9 +19,9 @@ const Movie = props =>(             //Single Row in a table
         <td>{props.movie.language}</td>
         <td>{props.movie.country}</td>
         <td>{props.movie.awards}</td>
-        <td>{props.movie.poster}</td>
+        {/* <td>{props.movie.poster}</td> */}
         {/* <td>{props.movie.type}</td> */}
-        <td>{props.movie.imdbid}</td>
+        <td>{props.movie.ImdbID}</td>
     </tr>
 )
 
@@ -71,7 +71,7 @@ export default class Viewallmovies extends Component {
                             <th>Language</th>
                             <th>Country</th>
                             <th>Awards</th>
-                            <th>Poster</th>
+                            {/* <th>Poster</th> */}
                             {/* <th>Type</th> */}
                             <th>ImdbID</th>
                         </tr>
