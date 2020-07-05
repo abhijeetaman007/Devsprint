@@ -3,9 +3,9 @@ import Movie from './Movie';
 
 export default function Movielist(props) {
     return (
-        <div className='container'>
+        <div className="container">
             <div className='row'>
-                <div className='col s12'>
+                <div className='col-sm-12'>
                     {
                         props.movies.map((movie,i)=>{
                             return <Movie key={i} movieInfo={props.movieInfo} movieid={movie.id} image={movie.poster_path}/>
@@ -14,5 +14,7 @@ export default function Movielist(props) {
                 </div>
             </div>
         </div>
+            
+        
     )
 }

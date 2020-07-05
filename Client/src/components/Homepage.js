@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import Header from "./Header";
 import Searchmovie from "./Searchmovie";
 import Movielist from "./Movielist";
 import Moviedetails from "./Moviedetails.js";
@@ -43,7 +42,6 @@ export default class Homepage extends Component {
     return (
       <div>
       {this.state.currmovie==null ?<div>
-          <Header />
           <Searchmovie handleSubmit={this.handleSubmit} handleChange={this.handleChange}/>
           <Movielist movieInfo={this.movieInfo} movies={this.state.moviesData} />
         </div>

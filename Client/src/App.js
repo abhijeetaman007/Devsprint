@@ -8,19 +8,27 @@ class App extends Component {
   render() {
     return (
       <Router>
-      <div className="container">
-        <nav className="navbar navbar-expand-lg navbar-light bg-light">
-          <Link to="/" className="navbar-brand">Movie management system</Link>
+      <div>
+        <nav className="navbar navbar-expand-lg navbar navbar-dark bg-dark">
+
+          <Link to="/" className="navbar-brand" style={{fontFamily:"Helvetica", fontWeight:"bold",}}> MOVE @ EASE </Link>
+
           <div className="collpase navbar-collapse">
+
             <ul className="navbar-nav mr-auto">
+
               <li className="navbar-item">
-                <Link to="/" className="nav-link">Homepage</Link>
+                <Link to="/" className="nav-link" style={{fontFamily:"Helvetica",opacity:"150%",}}>HOME</Link>
               </li>
+
               <li className="navbar-item">
-                <Link to="/create" className="nav-link">Add Movie</Link>
+                <Link to="/create" className="nav-link" style={{fontFamily:"Helvetica",opacity:"150%",}}>ADD MOVIE</Link>
               </li>
+              
             </ul>
+            
           </div>
+          
         </nav>
         <br/>
         <Route path="/" exact component={Homepage} />

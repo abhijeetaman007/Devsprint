@@ -181,7 +181,7 @@ export default class Addmovie extends Component {
 
     render() {
         return (
-            <div style={{marginTop: 10}}>
+            <div style={{margin: 30 }}>
                 <h3>Adding Movie</h3>
                 <form onSubmit={this.onSubmit}>
                     <div className="form-group"> 
