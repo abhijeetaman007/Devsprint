@@ -2,8 +2,8 @@ import React, { Component } from "react";
 import Header from "./Header";
 import Searchmovie from "./Searchmovie";
 import Movielist from "./Movielist";
-import Moviedetails from "./Moviedetails";
-export default class App extends Component {
+import Moviedetails from "./Moviedetails.js";
+export default class Homepage extends Component {
 
   constructor(props) {
     super(props);

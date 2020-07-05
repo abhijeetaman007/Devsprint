@@ -1,30 +1,29 @@
 const express=require('express')
 const router=express();
 
+
 const movies=require('../Models/movies')
 
 //To add a movie
 router.post('/add',async (req,res)=>{
     const movie=new movies({
-        title:req.body.Title,
-        year:req.body.Year,
-        rated:req.body.Rated,
-        runtime:req.body.Runtime,
-        genre:req.body.Genre,
-        director:req.body.Director,
-        writer:req.body.Writer,
-        production:req.body.Production,
-        actors:req.body.Actors,
-        plot:req.body.Plot,
-        language:req.body.Language,
-        country:req.body.Country,
-        awards:req.body.Awards,
-        poster:req.body.Poster,
-        type:req.body.Type,
+        title:req.body.title,
+        year:req.body.year,
+        rated:req.body.rated,
+        runtime:req.body.runtime,
+        genre:req.body.genre,
+        director:req.body.director,
+        writer:req.body.writer,
+        production:req.body.production,
+        actors:req.body.actors,
+        plot:req.body.plot,
+        language:req.body.language,
+        country:req.body.country,
+        awards:req.body.awards,
+        poster:req.body.poster,
+        type:req.body.type,
         ImdbID:req.body.imdbid,
-        Likes:req.body.likes,
-        Dislikes:req.body.dislikes,
-        Totalviews:req.body.totalviews
+        
     })
     try{
         const savedmovie= await movie.save();
@@ -34,6 +33,7 @@ router.post('/add',async (req,res)=>{
         res.json({message: err})
     }
 })
+
 //To view all movies of db
 router.get('/view/all',async (req,res)=>{
     try{

@@ -4,6 +4,9 @@ const mongoose=require('mongoose')
 const bodyparser=require('body-parser')
 const moviesroute=require('./Routes/movies')
 const fetchmoviesroute=require('./Routes/fetchmovie')
+const cors = require('cors');
+
+app.use(cors());
 
 //Middleware-to get post request body in Json
 app.use(bodyparser.json())
