@@ -41,6 +41,7 @@ export default class Homepage extends Component {
   render() {
     return (
       <div>
+      
       {this.state.currmovie==null ?<div>
           <Searchmovie handleSubmit={this.handleSubmit} handleChange={this.handleChange}/>
           <Movielist movieInfo={this.movieInfo} movies={this.state.moviesData} />
