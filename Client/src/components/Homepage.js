@@ -71,13 +71,14 @@ export default class Homepage extends Component {
     return (
       <div>
  
+      
+      <div>
+      {this.state.currmovie==null?
+      <div>
       <Searchmovie handleSubmit={this.handleSubmit} handleChange={this.handleChange}/>
       <Upcoming handleUpcoming={this.handleUpcoming}/>
       <NowPlaying handleNowplaying={this.handleNowplaying}/>
       <TopRated handleToprated={this.handleToprated}/>
-      <div>
-      {this.state.currmovie==null ?
-      <div>
       <Movielist movieInfo={this.movieInfo} movies={this.state.moviesData} />
       </div>
       :<Moviedetails currmovie={this.state.currmovie} goBack={this.goBack}/>}</div>
