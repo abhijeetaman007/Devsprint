@@ -11,7 +11,7 @@ class App extends Component {
       <div>
         <nav className="navbar navbar-expand-lg navbar navbar-dark bg-dark">
 
-          <Link to="/" className="navbar-brand" style={{fontFamily:"Helvetica", fontWeight:"bold",}}> MOVE @ EASE </Link>
+          <Link to="/" className="navbar-brand" style={{fontFamily: 'Bangers',fontSize:"2rem"}}> MOVE @ EASE </Link>
 
           <div className="collpase navbar-collapse">
 

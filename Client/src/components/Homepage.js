@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import Searchmovie from "./Searchmovie";
 import Movielist from "./Movielist";
 import Moviedetails from "./Moviedetails.js";
+import Upcoming from "./Upcoming";
 export default class Homepage extends Component {
 
   constructor(props) {
@@ -42,7 +43,7 @@ export default class Homepage extends Component {
     return (
       <div>
       <Searchmovie handleSubmit={this.handleSubmit} handleChange={this.handleChange}/>
-      {(this.state.searchTerm=="")?<div><center>Upcoming Movies👇👇👇</center></div>:<div>{this.state.currmovie==null ?<div>
+      {(this.state.searchTerm=="")?<div style={{fontFamily: 'Bangers'}}><center>Upcoming Movies👇👇👇<p><Upcoming/></p></center></div>:<div>{this.state.currmovie==null ?<div>
           
           <Movielist movieInfo={this.movieInfo} movies={this.state.moviesData} />
         </div>
