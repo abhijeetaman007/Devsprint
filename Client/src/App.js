@@ -18,11 +18,11 @@ class App extends Component {
             <ul className="navbar-nav mr-auto">
 
               <li className="navbar-item">
-                <Link to="/" className="nav-link" style={{fontFamily:"Helvetica",opacity:"150%",}}>HOME</Link>
+                <Link to="/" className="nav-link" style={{fontFamily:"Helvetica",color:"white"}}>HOME</Link>
               </li>
 
               <li className="navbar-item">
-                <Link to="/create" className="nav-link" style={{fontFamily:"Helvetica",opacity:"150%",}}>ADD MOVIE</Link>
+                <Link to="/create" className="nav-link" style={{fontFamily:"Helvetica",color:"white"}}>❤️ADD MOVIES❤️</Link>
               </li>
               
             </ul>
