@@ -31,6 +31,7 @@ class App extends Component {
           
         </nav>
         <br/>
+       
         <Route path="/" exact component={Homepage} />
         {/* <Route path="/edit/:id" component={EditTodo} /> */}
         <Route path="/create" component={Addmovie} />

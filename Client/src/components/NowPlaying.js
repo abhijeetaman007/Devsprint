@@ -1,0 +1,10 @@
+import React from 'react'
+
+export default function NowPlaying(props) {
+    return (
+        <div>
+            <button class="btn btn-outline-primary" style={{margin:"20px"}} onClick={props.handleNowplaying }>Now Playing</button>
+        </div>
+    )
+}
+//  https://api.themoviedb.org/3/genre/movie/list?api_key=de6b4672f86ff0807b144f81ff753824&language=en-US

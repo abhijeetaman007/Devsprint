@@ -2,7 +2,7 @@ import React from 'react'
 
 export default function Searchmovie(props) {
     return (
-      <div  style={{marginLeft:"50px",marginBottom:"50px"}}>
+      <div  style={{marginLeft:"30rem",marginBottom:"1rem"}}>
           
           <div className="form-inline">
             
