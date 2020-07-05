@@ -3,6 +3,7 @@ import "bootstrap/dist/css/bootstrap.min.css";   //using bootstrap
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import Homepage from "./components/Homepage"
 import Addmovie from "./components/Addmovie"
+import Viewallmovies from "./components/Viewallmovies"
 
 class App extends Component {
   render() {
@@ -24,6 +25,9 @@ class App extends Component {
               <li className="navbar-item">
                 <Link to="/create" className="nav-link" style={{fontFamily:"Helvetica",color:"white"}}>❤️ADD MOVIES❤️</Link>
               </li>
+              <li className="navbar-item">
+                <Link to="/viewall" className="nav-link" style={{fontFamily:"Helvetica",color:"white"}}>❤️VIEW ALL ADDED❤️</Link>
+              </li>
               
             </ul>
             
@@ -35,6 +39,7 @@ class App extends Component {
         <Route path="/" exact component={Homepage} />
         {/* <Route path="/edit/:id" component={EditTodo} /> */}
         <Route path="/create" component={Addmovie} />
+        <Route path="/viewall" component={Viewallmovies}/>
       </div>
     </Router>
   );

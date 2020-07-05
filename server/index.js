@@ -30,6 +30,6 @@ app.use('/movies',moviesroute)
 app.use('/fetchmovies',fetchmoviesroute)
 
 //Listening at post 5000
-app.listen(5000,()=>{
+app.listen(7000,()=>{
     console.log("Server is up and running at port 5000")
 })

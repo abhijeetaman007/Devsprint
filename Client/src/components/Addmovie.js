@@ -20,7 +20,7 @@ export default class Addmovie extends Component {
         this.onChangeMovieCountry = this.onChangeMovieCountry.bind(this);
         this.onChangeMovieAwards = this.onChangeMovieAwards.bind(this);
         this.onChangeMoviePoster = this.onChangeMoviePoster.bind(this);
-        this.onChangeMovieType = this.onChangeMovieType.bind(this);
+      //  this.onChangeMovieType = this.onChangeMovieType.bind(this);
         this.onChangeMovieImdbID = this.onChangeMovieImdbID.bind(this);
         
 
@@ -41,7 +41,7 @@ export default class Addmovie extends Component {
             country:'',
             awards:'',
             poster:'',
-            type:'',
+            //type:'',
             imdbid:'',
         }
     }
@@ -116,11 +116,11 @@ export default class Addmovie extends Component {
             poster: e.target.value
         });
     }
-    onChangeMovieType(e) {
-        this.setState({
-            type: e.target.value
-        });
-    }
+    // onChangeMovieType(e) {
+    //     this.setState({
+    //         type: e.target.value
+    //     });
+    // }
     onChangeMovieImdbID(e) {
         this.setState({
             imdbid: e.target.value
@@ -150,11 +150,11 @@ export default class Addmovie extends Component {
             country: this.state.country,
             awards: this.state.awards,
             poster: this.state.poster,
-            type: this.state.type,
+            //type: this.state.type,
             imdbid: this.state.imdbid,
           };
         
-        axios.post('http://localhost:5000/movies/add', newMovie)   //endpoint of backend
+        axios.post('http://localhost:7000/movies/add', newMovie)   //endpoint of backend
             .then(res => console.log(res.data));
 
         this.setState({
@@ -173,7 +173,7 @@ export default class Addmovie extends Component {
             country:'',
             awards:'',
             poster:'',
-            type:'',
+            //type:'',
             imdbid:'',
 
         })
@@ -297,14 +297,14 @@ export default class Addmovie extends Component {
                                 onChange={this.onChangeMoviePoster}
                                 />
                     </div>
-                    <div className="form-group"> 
+                    {/* <div className="form-group"> 
                         <label>Type: </label>
                         <input  type="text"
                                 className="form-control"
                                 value={this.state.type}
                                 onChange={this.onChangeMovieType}
                                 />
-                    </div>
+                    </div> */}
                     <div className="form-group"> 
                         <label>Imdb ID: </label>
                         <input  type="text"

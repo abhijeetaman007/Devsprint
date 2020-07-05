@@ -72,18 +72,18 @@ const movieSchema=mongoose.Schema({
             type:String,
             default:"Unknown"
         },
-        Likes:{
-            type:Number,
-            default: 0
-        },
-        Dislikes:{
-            type:Number,
-            default: 0
-        },
-        Totalviews:{
-            type:Number,
-            default: 0            
-        }
+        // Likes:{
+        //     type:Number,
+        //     default: 0
+        // },
+        // Dislikes:{
+        //     type:Number,
+        //     default: 0
+        // },
+        // Totalviews:{
+        //     type:Number,
+        //     default: 0            
+        // }
 })
 
 module.exports=mongoose.model('movies',movieSchema)

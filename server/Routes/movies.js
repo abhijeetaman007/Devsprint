@@ -153,9 +153,9 @@ router.patch('/update/:title',async (req,res)=>{
                 Awards:req.body.awards,
                 Type:req.body.type,
                 imdbID:req.body.imdbid,
-                Likes:req.body.likes,
-                Dislikes:req.body.dislikes,
-                Totalviews:req.body.totalviews
+                //Likes:req.body.likes,
+                //Dislikes:req.body.dislikes,
+                //Totalviews:req.body.totalviews
             },
         })
         res.json(updatedmovie)
