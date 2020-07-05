@@ -41,12 +41,13 @@ export default class Homepage extends Component {
   render() {
     return (
       <div>
-      
-      {this.state.currmovie==null ?<div>
-          <Searchmovie handleSubmit={this.handleSubmit} handleChange={this.handleChange}/>
+      <Searchmovie handleSubmit={this.handleSubmit} handleChange={this.handleChange}/>
+      {(this.state.searchTerm=="")?<div><center>Upcoming Movies👇👇👇</center></div>:<div>{this.state.currmovie==null ?<div>
+          
           <Movielist movieInfo={this.movieInfo} movies={this.state.moviesData} />
         </div>
-        :<Moviedetails currmovie={this.state.currmovie} goBack={this.goBack}/>}
+        :<Moviedetails currmovie={this.state.currmovie} goBack={this.goBack}/>}</div>}
+      
         
       </div>
     );
