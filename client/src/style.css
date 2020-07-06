@@ -8,5 +8,5 @@ body{
     color: blanchedalmond;
 } 
 .key:hover{
-    background-color: teal;
+    font-size: 125%;
 }
