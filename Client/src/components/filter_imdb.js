@@ -1,4 +1,4 @@
-//Filtering Movies by rated
+//Filtering Movies by imdbid
 import React, { Component } from 'react'
 import axios from 'axios';
 
