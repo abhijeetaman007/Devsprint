@@ -37,8 +37,15 @@ class filterrated extends Component {
 
             
     }
-    
+    onButtonClicked=(e)=>{
+        e.preventDefault()
+        this.setState({
+            rated:'',
+            movies:[],
+            present:false
+        })
 
+    }
     
     
 
@@ -87,6 +94,7 @@ class filterrated extends Component {
                     <h5>Imdb ID:{item.ImdbID}</h5>
                 <hr></hr>
   </div>)}
+                <input class="btn btn-primary" type="reset" value="Reset Filter" onClick={this.onButtonClicked}></input>
             </div>
         )
     }

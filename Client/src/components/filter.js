@@ -41,6 +41,15 @@ class filter extends Component {
 
             
     }
+    onButtonClicked=(e)=>{
+        e.preventDefault()
+        this.setState({
+            year:'',
+            movies:[],
+            present:false
+        })
+
+    }
     
 
     
@@ -92,6 +101,8 @@ class filter extends Component {
                     <h5>Imdb ID:{item.ImdbID}</h5>
                 <hr></hr>
   </div>)}
+                    {/* <button type="button" class="btn btn-outline-primary" onClick={this.onButtonClicked}>Reset Filter</button> */}
+                    <input class="btn btn-primary" type="reset" value="Reset Filter" onClick={this.onButtonClicked}></input>
             </div>
         )
     }
