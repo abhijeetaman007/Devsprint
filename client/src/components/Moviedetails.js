@@ -10,8 +10,8 @@ const Moviedetails = (props) => {
                 <div className="row">
                     <div className="col">
                         { props.currmovie.poster_path == null ? <img style={{borderColor:"white"}} className="" src={`https://s3-ap-southeast-1.amazonaws.com/upcode/static/default-image.jpg`} style={{ width: "90%",
-                            height: 360}} /> : <img style={{borderColor:"white"}} className="" src={`http://image.tmdb.org/t/p/w185${props.currmovie.poster_path}`} style={{ width: "90%",
-                            height: 360}} />}
+                            height: 550}} /> : <img style={{borderColor:"white"}} className="" src={`http://image.tmdb.org/t/p/w185${props.currmovie.poster_path}`} style={{ width: "90%",
+                            height: 550}} />}
                     </div>
                     <div className="col">
                         <div className="info-container">

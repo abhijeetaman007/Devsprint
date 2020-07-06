@@ -72,8 +72,10 @@ class filterrated extends Component {
         
     }
     else{
-        const { movies,rated }= this.state
-        return (
+        if(this.state.movies.length>0)
+        {
+            const { movies,rated }= this.state
+            return (
             <div>
                 
                 <h1>{rated} rated movies</h1>
@@ -92,12 +94,29 @@ class filterrated extends Component {
                     <h5>Country:{item.country}</h5>
                     <h5>Awards:{item.awards}</h5>
                     <h5>Imdb ID:{item.ImdbID}</h5>
-                <hr></hr>
+                <hr style={{borderWidth:"10px",width:"95%"}}></hr>
   </div>)}
                 <input class="btn btn-primary" type="reset" value="Reset Filter" onClick={this.onButtonClicked}></input>
+                <br/>
+                <br/>
             </div>
         )
-    }
+        }
+        else
+        {
+            return(
+                <div>
+                        <br/>
+                        <h4 styles={{fontStyle:"italic"}}>No Records found </h4>
+                        <br/>
+                        <input class="btn btn-primary" type="reset" value="Reset Filter"  onClick={this.onButtonClicked}></input>
+                        <br/>
+                        <br/>
+                </div>   
+
+            )
+        }        
+        }
     }
 }
 

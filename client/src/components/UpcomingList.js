@@ -2,8 +2,8 @@ import React from 'react'
 
 export default function UpcomingList(props) {
     return (
-        <div>
-            <button class="btn btn-outline-primary" style={{margin:"20px"}} onClick={props.handleUpcoming }>Upcoming Movies</button>
+        <div style={{margin:"10px"}}>
+            <button class="btn btn-outline-primary" style={{marginLeft:"20px",padding:"10px"}} onClick={props.handleUpcoming }>Upcoming Movies</button>
         </div>
     )
 }

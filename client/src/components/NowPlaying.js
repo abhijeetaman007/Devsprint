@@ -2,8 +2,8 @@ import React from 'react'
 
 export default function NowPlaying(props) {
     return (
-        <div>
-            <button class="btn btn-outline-primary" style={{margin:"20px"}} onClick={props.handleNowplaying }>Now Playing</button>
+        <div style={{margin:"10px"}}>
+            <button class="btn btn-outline-primary" style={{marginLeft:"20px",paddingRight:"28px",paddingLeft:"28px"}} onClick={props.handleNowplaying }>Now Playing</button>
         </div>
     )
 }

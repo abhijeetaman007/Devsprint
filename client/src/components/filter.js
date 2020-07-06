@@ -74,15 +74,17 @@ class filter extends Component {
                     </div>
                 </form>
                 {/* <Filtergenre/> */}
+                
             </div>
         )
         
     }
     else{
-        const { movies,year }= this.state
+        if(this.state.movies.length>0)
+        {
+            const { movies,year }= this.state
         return (
             <div>
-                
                 <h1>    Movies of {year}</h1>
                 {movies.map(item => 
                     <div className="key" >
@@ -99,12 +101,29 @@ class filter extends Component {
                     <h5>Country:{item.country}</h5>
                     <h5>Awards:{item.awards}</h5>
                     <h5>Imdb ID:{item.ImdbID}</h5>
-                <hr></hr>
-  </div>)}
-                    {/* <button type="button" class="btn btn-outline-primary" onClick={this.onButtonClicked}>Reset Filter</button> */}
-                    <input class="btn btn-primary" type="reset" value="Reset Filter" onClick={this.onButtonClicked}></input>
+                <hr style={{borderWidth:"10px",width:"95%"}}></hr>
+             </div>)}          
+                            {/* <button type="button" class="btn btn-outline-primary" onClick={this.onButtonClicked}>Reset Filter</button> */}
+                        <input class="btn btn-primary" type="reset" value="Reset Filter"  onClick={this.onButtonClicked}></input>                    
+                        <br/>
+                        <br/>
             </div>
         )
+        }
+        else
+        {
+            return(
+                <div>
+                        <br/>
+                        <h4 styles={{fontStyle:"italic"}}>No Records found </h4>
+                        <br/>
+                        <input class="btn btn-primary" type="reset" value="Reset Filter"  onClick={this.onButtonClicked}></input>
+                        <br/>
+                        <br/>
+                </div>   
+
+            )
+        }
     }
     }
 }
