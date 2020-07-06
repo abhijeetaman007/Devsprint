@@ -5,13 +5,12 @@ const Moviedetails = (props) => {
         <div>
             <div className="container">
                 <div className="row" onClick={props.goBack} style={{cursor: "pointer",marginBottom:"5rem"}}>
-                {/* <i class="fa fa-arrow-left" aria-hidden="true"></i> */}
-                    <span style={{fontFamily: 'Bangers',fontSize:"2rem"}}>GO BACK</span>
+                    <span style={{fontFamily: 'Bangers',fontSize:"2rem"}}>⬅️GO BACK</span>
                 </div>
                 <div className="row">
                     <div className="col">
-                        { props.currmovie.poster_path == null ? <img className="" src={`https://s3-ap-southeast-1.amazonaws.com/upcode/static/default-image.jpg`} style={{ width: "90%",
-                            height: 360}} /> : <img className="" src={`http://image.tmdb.org/t/p/w185${props.currmovie.poster_path}`} style={{ width: "90%",
+                        { props.currmovie.poster_path == null ? <img style={{borderColor:"white"}} className="" src={`https://s3-ap-southeast-1.amazonaws.com/upcode/static/default-image.jpg`} style={{ width: "90%",
+                            height: 360}} /> : <img style={{borderColor:"white"}} className="" src={`http://image.tmdb.org/t/p/w185${props.currmovie.poster_path}`} style={{ width: "90%",
                             height: 360}} />}
                     </div>
                     <div className="col">

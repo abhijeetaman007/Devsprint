@@ -7,7 +7,7 @@ import Filterimdb  from "./filter_imdb"
 export class filterall extends Component {
     render() {
         return (
-            <div>
+            <div style={{marginLeft:"100px"}} >
                 <h3>Filter Added Movies</h3>
                 <Filteryear/> 
                 <Filtergenre/>
