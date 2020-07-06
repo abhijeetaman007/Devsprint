@@ -47,7 +47,7 @@ class filtergenre extends Component {
         if(!this.state.present){
         return (
             <div>
-                <h3>Filter added movies</h3>
+                {/* <h3>Filter added movies</h3> */}
                 <form onSubmit={this.onSubmit}>
                 <div className="form-group col-md-3"> 
                         <label>Genre: </label>

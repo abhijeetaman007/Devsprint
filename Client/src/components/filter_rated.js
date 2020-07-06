@@ -1,32 +1,29 @@
-//Filtering Movies by year
+//Filtering Movies by rated
 import React, { Component } from 'react'
 import axios from 'axios';
-// import Filtergenre from './filter_genre'
 
-class filter extends Component {
+class filterrated extends Component {
      
     constructor(props) {
         super(props)
     
         this.state = {
             movies:[],
-             year:'',
+             rated:'',
              present:false
         }
-        // this.onChangeYear=this.onChangeYear.bind(this)
-        // this.onSubmit=this.onChangeYear.bind(this)
     }
 
-    onChangeYear=(e)=>{
+    onChangeRated=(e)=>{
         this.setState({
-            year: e.target.value
+            rated: e.target.value
             
         })
-        console.log(this.state.year)
+        console.log(this.state.rated)
     }
     onSubmit=(e)=>{
         e.preventDefault();
-        axios.get('http://localhost:7000/movies/year/'+this.state.year)
+        axios.get('http://localhost:7000/movies/rated/'+this.state.rated)
             .then(response =>{
                 this.setState({movies: response.data})
                 console.log("Data fetched")
@@ -36,7 +33,6 @@ class filter extends Component {
             })
             this.setState({
                 present: true,
-                //year:''
             })
 
             
@@ -53,34 +49,33 @@ class filter extends Component {
                 {/* <h3>Filter added movies</h3> */}
                 <form onSubmit={this.onSubmit}>
                 <div className="form-group col-md-3"> 
-                        <label>Year: </label>
+                        <label>Rated: </label>
                         <input  type="text"
                                 className="form-control"
-                                value={this.state.year}
-                                onChange={this.onChangeYear}
+                                value={this.state.rated}
+                                onChange={this.onChangeRated}
                                 />
                     </div>
                     <div className="form-group">
                         <input type="submit" value="Show Movies" className="btn btn-primary" />
                     </div>
                 </form>
-                {/* <Filtergenre/> */}
             </div>
         )
         
     }
     else{
-        const { movies,year }= this.state
+        const { movies,rated }= this.state
         return (
             <div>
                 
-                <h1>    Movies of {year}</h1>
+                <h1>{rated} rated movies</h1>
                 {movies.map(item => 
                     <div className="key" >
                     <h3>Title: {item.title}</h3>
-                    <h5>Rated:{item.rated}</h5>
-                    <h5>Runtime:{item.runtime}</h5>
                     <h5>Genre:{item.genre}</h5>
+                    <h5>Runtime:{item.runtime}</h5>
+                    <h5>Year:{item.year}</h5>
                     <h5>Actors:{item.actors}</h5>
                     <h5>Director:{item.director}</h5>
                     <h5>Writer:{item.writer}</h5>
@@ -98,4 +93,4 @@ class filter extends Component {
     }
 }
 
-export default filter
+export default filterrated

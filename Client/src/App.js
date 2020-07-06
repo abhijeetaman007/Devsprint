@@ -4,8 +4,9 @@ import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import Homepage from "./components/Homepage"
 import Addmovie from "./components/Addmovie"
 import Viewallmovies from "./components/Viewallmovies"
-import filter_year from "./components/filter"
-import filtergenre from "./components/filter_genre"
+// import filter_year from "./components/filter"
+// import filtergenre from "./components/filter_genre"
+import Filter from "./components/filterall"
 import './style.css'
 
 class App extends Component {
@@ -31,11 +32,14 @@ class App extends Component {
               <li className="navbar-item">
                 <Link to="/viewall" className="nav-link" style={{fontFamily:"Helvetica",color:"white"}}>VIEW ADDED MOVIES</Link>
               </li>
-              <li className="navbar-item">
+              {/* <li className="navbar-item">
                 <Link to="/filter/year" className="nav-link" style={{fontFamily:"Helvetica",color:"white"}}>FILTER ADDED MOVIES BY YEAR</Link>
               </li>
               <li className="navbar-item">
                 <Link to="/filter/genre" className="nav-link" style={{fontFamily:"Helvetica",color:"white"}}>FILTER ADDED MOVIES BY GENRE</Link>
+              </li> */}
+              <li className="navbar-item">
+                <Link to="/filter" className="nav-link" style={{fontFamily:"Helvetica",color:"white"}}>FILTER</Link>
               </li>
             </ul>
             
@@ -48,8 +52,9 @@ class App extends Component {
         {/* <Route path="/edit/:id" component={EditTodo} /> */}
         <Route path="/create" component={Addmovie} />
         <Route path="/viewall" component={Viewallmovies}/>
-        <Route path="/filter/year" component={filter_year}/>
-        <Route path="/filter/genre" component={filtergenre}/>
+        <Route path="/filter" component={Filter}/>
+        {/* <Route path="/filter/year" component={filter_year}/>
+        <Route path="/filter/genre" component={filtergenre}/> */}
       </div>
     </Router>
   );
