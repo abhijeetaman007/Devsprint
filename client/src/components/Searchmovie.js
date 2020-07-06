@@ -8,7 +8,7 @@ export default function Searchmovie(props) {
             
             <form onSubmit={props.handleSubmit} action="">
                 <div class="input-field">
-                    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" onChange={props.handleChange} />  
+                    <input class="form-control mr-sm-2" type="search" placeholder="Search any movie" aria-label="Search" onChange={props.handleChange} />  
                     <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>                          
                 </div>  
             </form>
