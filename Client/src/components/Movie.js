@@ -3,7 +3,7 @@ import React from 'react'
 export default function Movie(props) {
     return (
         <div className='col-sm-12 col-md-6 col-lg-3'>
-            <div className='card'>
+            <div className='card' style={{marginBottom:"25px"}}>
             <div class="card-img-top">
             {
                 props.image==null?<img src={`https://s3-ap-southeast-1.amazonaws.com/upcode/static/default-image.jpg`} style={{ width: "100%",
@@ -12,7 +12,7 @@ export default function Movie(props) {
             }
             </div>
             <div class="card-body">                    
-                    <p className="card-text"><a href="#" onClick={() => props.movieInfo(props.movieid)}>View Details</a></p>
+                    <p className="card-text"><a href="#" style={{fontWeight:"bold"}} onClick={() => props.movieInfo(props.movieid)}>View Details</a></p>
                 </div>  
         </div>
         </div>
