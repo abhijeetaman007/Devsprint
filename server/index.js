@@ -29,7 +29,7 @@ app.use('/movies',moviesroute)
 //Middleware for fetching movies to db
 app.use('/fetchmovies',fetchmoviesroute)
 
-//Listening at post 5000
+//Listening at post 7000
 app.listen(7000,()=>{
-    console.log("Server is up and running at port 5000")
+    console.log("Server is up and running at port 7000")
 })

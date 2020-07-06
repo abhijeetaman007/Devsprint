@@ -48,7 +48,7 @@ router.get('/view/all',async (req,res)=>{
 //To view movie using its title
 router.get('/view/title/:title',async(req,res)=>{
     try{
-        const viewmovie= await movies.find({Title:req.params.title})
+        const viewmovie= await movies.find({title:req.params.title})
         res.json(viewmovie)
     }
     catch(err){
@@ -56,9 +56,9 @@ router.get('/view/title/:title',async(req,res)=>{
     }
 })
 //To view movie using imdbID
-router.get('/view/imbdid/:imdbid',async(req,res)=>{
+router.get('/view/imdbid/:imdbid',async(req,res)=>{
     try{
-        const viewmovie= await movies.find({imdbID:req.params.imdbid})
+        const viewmovie= await movies.find({ImdbID:req.params.imdbid})
         res.json(viewmovie)
     }
     catch(err){
@@ -69,7 +69,7 @@ router.get('/view/imbdid/:imdbid',async(req,res)=>{
 //Filter movies by Genre
 router.get('/genre/:genretype',async(req,res)=>{
     try{
-        const genrefound= await movies.find({Genre:req.params.genretype})
+        const genrefound= await movies.find({genre:req.params.genretype})
         res.json(genrefound)
     }
     catch(err){
@@ -80,7 +80,7 @@ router.get('/genre/:genretype',async(req,res)=>{
 //Filter movies by year
 router.get('/year/:year',async(req,res)=>{
     try{
-        const movieyearfound= await movies.find({Year:req.params.year})
+        const movieyearfound= await movies.find({year:req.params.year})
         res.json(movieyearfound)
     }
     catch(err){
@@ -91,7 +91,7 @@ router.get('/year/:year',async(req,res)=>{
 //Filter movies by Rated type
 router.get('/rated/:rated',async(req,res)=>{
     try{
-        const moviefound= await movies.find({Rated:req.params.rated})
+        const moviefound= await movies.find({rated:req.params.rated})
         res.json(moviefound)
     }
     catch(err){
@@ -102,7 +102,7 @@ router.get('/rated/:rated',async(req,res)=>{
 //Filter movie by director
 router.get('/director/:director',async(req,res)=>{
     try{
-        const moviefound= await movies.find({Director:req.params.director})
+        const moviefound= await movies.find({director:req.params.director})
         res.json(moviefound)
     }
     catch(err){
@@ -124,7 +124,7 @@ router.delete('/delete/movieid/:movieid',async(req,res)=>{
 //To delete a movie using its title
 router.delete('/delete/title/:title',async(req,res)=>{
     try{
-        const deltedmovie= await movies.deleteOne({Title:req.params.title})
+        const deltedmovie= await movies.deleteOne({title:req.params.title})
         res.json(deltedmovie)
     }
     catch(err){
@@ -136,23 +136,23 @@ router.delete('/delete/title/:title',async(req,res)=>{
 router.patch('/update/:title',async (req,res)=>{
     try{
         const updatedmovie= await movies.updateMany(
-            {Title:req.params.title},
+            {title:req.params.title},
             {$set:{
-                Title:req.body.title,
-                Year:req.body.year,
-                Rated:req.body.rated,
-                Runtime:req.body.runtime,
-                Genre:req.body.genre,
-                Director:req.body.director,
-                Writer:req.body.writer,
-                Production:req.body.production,
-                Actors:req.body.actors,
-                Plot:req.body.plot,
-                Language:req.body.language,
-                Country:req.body.country,
-                Awards:req.body.awards,
+                title:req.body.title,
+                year:req.body.year,
+                rated:req.body.rated,
+                runtime:req.body.runtime,
+                genre:req.body.genre,
+                director:req.body.director,
+                writer:req.body.writer,
+                production:req.body.production,
+                actors:req.body.actors,
+                plot:req.body.plot,
+                language:req.body.language,
+                country:req.body.country,
+                awards:req.body.awards,
                 //Type:req.body.type,
-                imdbID:req.body.imdbid,
+                ImdbID:req.body.ImdbID,
                 //Likes:req.body.likes,
                 //Dislikes:req.body.dislikes,
                 //Totalviews:req.body.totalviews
