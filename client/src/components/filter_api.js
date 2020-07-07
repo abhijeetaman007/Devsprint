@@ -64,7 +64,7 @@ export class filter_api extends Component {
     render() {
         if(!this.state.present){
         return (
-            // <div>
+            <div style={{marginLeft:"20px"}}>
                     <form onSubmit={this.handleSubmit}>
         <label>
           Pick Genre:
@@ -105,7 +105,7 @@ export class filter_api extends Component {
         <input type="submit" value="Submit" />
       </form>
 
-            // </div>
+        </div>
         )
     }
     else{
@@ -116,7 +116,7 @@ export class filter_api extends Component {
         // )
         const {movies,value}=this.state
         return(
-            <div>
+            <div style={{marginLeft:"20px"}}>
 
         <h1>Movies:</h1>
 
@@ -126,12 +126,17 @@ export class filter_api extends Component {
             {movies.map(item => 
                 <div className="key" >
                 <img src={"http://image.tmdb.org/t/p/w185/"+item.poster_path}/>
-                <h3>Title: {item.title}</h3>
-                <h3>Release Date:{item.release_date}</h3>
-            <h3>Overview:{item.overview}</h3>
-            <h3>Popularity:{item.popularity}</h3>
-            <h3>Vote Average:{item.vote_average}</h3>
-            <h3>Adult:<p>{item.adult}</p></h3>
+                <br/>
+                <br/>
+                <div className="col">
+                <h6>Title: {item.title}</h6>
+                <h6>Release Date:{item.release_date}</h6>
+            <h6>Overview:{item.overview}</h6>
+            <h6>Popularity:{item.popularity}</h6>
+            <h6>Vote Average:{item.vote_average}</h6>
+            <h6>Adult:<p>{item.adult}</p></h6>
+                </div>
+               
                 
             <hr style={{borderWidth:"10px",width:"95%"}}></hr>
 </div>)}
