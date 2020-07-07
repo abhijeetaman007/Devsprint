@@ -10,3 +10,7 @@ body{
 .key:hover{
     font-weight: bold;
 }
+.key:active :visited{
+    background-color:white;
+    color:black;
+}

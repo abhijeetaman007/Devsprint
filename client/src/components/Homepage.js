@@ -31,7 +31,7 @@ export default class Homepage extends Component {
     fetch(`https://api.themoviedb.org/3/movie/upcoming?api_key=de6b4672f86ff0807b144f81ff753824&language=en-US&page=1`)
     .then(data => data.json())
     .then(data => {
-      this.setState({ moviesData: [...data.results]})
+      this.setState({ moviesData: [...data.results],totalResults:data.total_results})
     })
     
     e.preventDefault()
@@ -40,7 +40,7 @@ export default class Homepage extends Component {
     fetch(`https://api.themoviedb.org/3/movie/now_playing?api_key=de6b4672f86ff0807b144f81ff753824&language=en-US&page=1`)
     .then(data => data.json())
     .then(data => {
-      this.setState({ moviesData: [...data.results]})
+      this.setState({ moviesData: [...data.results],totalResults:data.total_results})
     })
     
     e.preventDefault()
@@ -49,7 +49,7 @@ export default class Homepage extends Component {
     fetch(`https://api.themoviedb.org/3/movie/top_rated?api_key=de6b4672f86ff0807b144f81ff753824&language=en-US&page=1`)
     .then(data => data.json())
     .then(data => {
-      this.setState({ moviesData: [...data.results]})
+      this.setState({ moviesData: [...data.results],totalResults:data.total_results})
     })
     
     e.preventDefault()

@@ -23,11 +23,11 @@ class App extends Component {
             <ul className="navbar-nav mr-auto">
 
               <li className="navbar-item" class="key"> 
-                <Link to="/" className="nav-link" style={{fontFamily:"Helvetica",color:"white"}}>HOME</Link>
+                <Link to="/" className="nav-item nav-link" href="#" style={{fontFamily:"Helvetica",color:"white"}}>HOME</Link>
               </li>
 
               <li className="navbar-item" class="key">
-                <Link to="/create" className="nav-link" style={{fontFamily:"Helvetica",color:"white"}}>ADD MOVIES</Link>
+                <Link to="/create" className="nav-item nav-link" href="#" style={{fontFamily:"Helvetica",color:"white"}}>ADD MOVIES</Link>
               </li>
               {/* <li className="navbar-item">
                 <Link to="/filter/year" className="nav-link" style={{fontFamily:"Helvetica",color:"white"}}>FILTER ADDED MOVIES BY YEAR</Link>
@@ -36,10 +36,10 @@ class App extends Component {
                 <Link to="/filter/genre" className="nav-link" style={{fontFamily:"Helvetica",color:"white"}}>FILTER ADDED MOVIES BY GENRE</Link>
               </li> */}
               <li className="nav-item" class="key">
-                <Link to="/filter" className="nav-link" style={{fontFamily:"Helvetica",color:"white"}}>FILTER</Link>
+                <Link to="/filter" className="nav-item nav-link" href="#" style={{fontFamily:"Helvetica",color:"white"}}>FILTER</Link>
               </li>
               <li className="nav-item" class="key">
-                <Link to="/viewall" className="nav-link" style={{fontFamily:"Helvetica",color:"white"}}>VIEW ADDED MOVIES</Link>
+                <Link to="/viewall" className="nav-item nav-link" href="#" style={{fontFamily:"Helvetica",color:"white"}}>VIEW ADDED MOVIES</Link>
               </li>
             </ul>
             
