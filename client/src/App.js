@@ -35,10 +35,10 @@ class App extends Component {
               <li className="navbar-item">
                 <Link to="/filter/genre" className="nav-link" style={{fontFamily:"Helvetica",color:"white"}}>FILTER ADDED MOVIES BY GENRE</Link>
               </li> */}
-              <li className="navbar-item" class="key">
+              <li className="nav-item" class="key">
                 <Link to="/filter" className="nav-link" style={{fontFamily:"Helvetica",color:"white"}}>FILTER</Link>
               </li>
-              <li className="navbar-item" class="key">
+              <li className="nav-item" class="key">
                 <Link to="/viewall" className="nav-link" style={{fontFamily:"Helvetica",color:"white"}}>VIEW ADDED MOVIES</Link>
               </li>
             </ul>
@@ -62,3 +62,4 @@ class App extends Component {
 }
 
 export default App;
+

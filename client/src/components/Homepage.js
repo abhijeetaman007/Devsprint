@@ -5,6 +5,7 @@ import Moviedetails from "./Moviedetails.js";
 import Upcoming from "./UpcomingList";
 import NowPlaying from "./NowPlaying";
 import TopRated from "./Toprated";
+import Pagination from "./Pagination";
 export default class Homepage extends Component {
 
   constructor(props) {
@@ -13,13 +14,15 @@ export default class Homepage extends Component {
       moviesData: [],
       searchTerm:"",
       currmovie:null,
+      totalResults:0,
+      currentPage:1
     };
   }  
   handleSubmit = (e) => { 
     fetch(`https://api.themoviedb.org/3/search/movie?api_key=de6b4672f86ff0807b144f81ff753824&query=${this.state.searchTerm}`)
     .then(data => data.json())
     .then(data => {
-      this.setState({ moviesData: [...data.results]})
+      this.setState({ moviesData: [...data.results],totalResults:data.total_results})
     })
     
     e.preventDefault()
@@ -67,11 +70,18 @@ export default class Homepage extends Component {
     this.setState({currmovie:null})
   }
  
+  nextPage=(pageNumber)=>{
+    fetch(`https://api.themoviedb.org/3/search/movie?api_key=de6b4672f86ff0807b144f81ff753824&query=${this.state.searchTerm}&page=${pageNumber}`)
+    .then(data => data.json())
+    .then(data => {
+      this.setState({ moviesData: [...data.results],currentPage:pageNumber})
+    })
+    
+  
+  }
   render() {
-    return (
-      <div>
- 
-      
+    const numberPages=Math.floor(this.state.totalResults/20);
+    return (    
       <div>
       {this.state.currmovie==null?
       <div>
@@ -80,11 +90,12 @@ export default class Homepage extends Component {
       <NowPlaying handleNowplaying={this.handleNowplaying}/>
       <TopRated handleToprated={this.handleToprated}/>
       <Movielist movieInfo={this.movieInfo} movies={this.state.moviesData} />
+      {this.state.totalResults>20?<Pagination pages={numberPages} nextPage={this.nextPage} currentPage={this.state.currentPage}/>:""}
       </div>
-      :<Moviedetails currmovie={this.state.currmovie} goBack={this.goBack}/>}</div>
+      :<Moviedetails currmovie={this.state.currmovie} goBack={this.goBack}/>}
+      </div>
       
-        
-      </div>
+      
     );
   }
 }
