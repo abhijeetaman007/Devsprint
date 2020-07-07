@@ -7,6 +7,7 @@ import Viewallmovies from "./components/Viewallmovies"
 // import filter_year from "./components/filter"
 // import filtergenre from "./components/filter_genre"
 import Filter from "./components/filterall"
+import Filterapi from "./components/filter_api"
 import './style.css'
 
 class App extends Component {
@@ -26,9 +27,7 @@ class App extends Component {
                 <Link to="/" className="nav-item nav-link" href="#" style={{fontFamily:"Helvetica",color:"white"}}>HOME</Link>
               </li>
 
-              <li className="navbar-item" class="key">
-                <Link to="/create" className="nav-item nav-link" href="#" style={{fontFamily:"Helvetica",color:"white"}}>ADD MOVIES</Link>
-              </li>
+              
               {/* <li className="navbar-item">
                 <Link to="/filter/year" className="nav-link" style={{fontFamily:"Helvetica",color:"white"}}>FILTER ADDED MOVIES BY YEAR</Link>
               </li>
@@ -36,11 +35,18 @@ class App extends Component {
                 <Link to="/filter/genre" className="nav-link" style={{fontFamily:"Helvetica",color:"white"}}>FILTER ADDED MOVIES BY GENRE</Link>
               </li> */}
               <li className="nav-item" class="key">
-                <Link to="/filter" className="nav-item nav-link" href="#" style={{fontFamily:"Helvetica",color:"white"}}>FILTER</Link>
+                <Link to="/filterapi" className="nav-item nav-link" href="#" style={{fontFamily:"Helvetica",color:"white"}}>FILTER MOVIES</Link>
+              </li>
+              <li className="navbar-item" class="key">
+                <Link to="/create" className="nav-item nav-link" href="#" style={{fontFamily:"Helvetica",color:"white"}}>ADD YOUR MOVIES</Link>
               </li>
               <li className="nav-item" class="key">
-                <Link to="/viewall" className="nav-item nav-link" href="#" style={{fontFamily:"Helvetica",color:"white"}}>VIEW ADDED MOVIES</Link>
+                <Link to="/filter" className="nav-item nav-link" href="#" style={{fontFamily:"Helvetica",color:"white"}}>FILTER ADDED MOVIES</Link>
               </li>
+              <li className="nav-item" class="key">
+                <Link to="/viewall" className="nav-item nav-link" href="#" style={{fontFamily:"Helvetica",color:"white"}}>VIEW ALL ADDED MOVIES</Link>
+              </li>
+              
             </ul>
             
           </div>
@@ -53,6 +59,7 @@ class App extends Component {
         <Route path="/create" component={Addmovie} />
         <Route path="/viewall" component={Viewallmovies}/>
         <Route path="/filter" component={Filter}/>
+        <Route path="/filterapi" component={Filterapi}/>
         {/* <Route path="/filter/year" component={filter_year}/>
         <Route path="/filter/genre" component={filtergenre}/> */}
       </div>
