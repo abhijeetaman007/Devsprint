@@ -6,18 +6,18 @@ export class filter_api extends Component {
         super(props)
     
         this.state = {
-             value:'Select Genre',
+            //  value:'Select Genre',
              from:'',
              to:'',
              movies:[],
              present:false
         }
     }
-    handleChange=(e)=>{
-        this.setState({
-            value: e.target.value
-        })
-    }
+    // handleChange=(e)=>{
+    //     this.setState({
+    //         value: e.target.value
+    //     })
+    // }
     
     onChangeFrom=(e)=>{
         this.setState({
@@ -32,10 +32,10 @@ export class filter_api extends Component {
     
     handleSubmit=(e)=>{
         e.preventDefault()
-        console.log(this.state.value)
-        console.log(this.state.from)
-        console.log(this.state.to)
-        axios.get('https://api.themoviedb.org/3/discover/movie?api_key=de6b4672f86ff0807b144f81ff753824&sort_by=popularity.desc&with_genres='+this.state.value+'&primary_release_date.gte='+this.state.from+'&primary_release_date.lte='+this.state.to)
+        // console.log(this.state.value)
+        // console.log(this.state.from)
+        // console.log(this.state.to)
+        axios.get('https://api.themoviedb.org/3/discover/movie?api_key=de6b4672f86ff0807b144f81ff753824&primary_release_date.gte='+this.state.from+'&primary_release_date.lte='+this.state.to)
         .then(res=>this.setState({
             movies:res.data.results
         }))
@@ -51,7 +51,7 @@ export class filter_api extends Component {
     onButtonClicked=(e)=>{
         e.preventDefault()
         this.setState({
-            value:'Select Genre',
+            // value:'Select Genre',
             movies:[],
             from:'',
             to:'',
@@ -66,7 +66,7 @@ export class filter_api extends Component {
         return (
             <div style={{marginLeft:"20px"}}>
                     <form onSubmit={this.handleSubmit}>
-        <label>
+        {/* <label>
            Pick Genre: 
           <select value={this.state.value} onChange={this.handleChange}>
             <option selected value="Select">Select Genre</option>
@@ -91,7 +91,7 @@ export class filter_api extends Component {
             <option value="37">Western</option>
           </select>
         </label>
-        <br/>
+        <br/> */}
         <label>From:</label>
         <input type="text" className="form-control col-md-3"placeholder="Enter initial date" value={this.state.from} onChange={this.onChangeFrom}/>
         <small>*Please enter date in YYYY-MM-DD format eg.2014-09-15</small>
