@@ -1,3 +1,4 @@
+//Filtering by genre and year: View Best of all time
 import React, { Component } from 'react'
 import axios from 'axios';
 
@@ -82,55 +83,60 @@ export class filter_api_1 extends Component {
             <option value="10752">War</option>
             <option value="37">Western</option>
           </select>
-        {/* </label> */}
         <br></br><br></br>
         </label>
-        <input type="text" className="form-control col-md-3"placeholder="Enter year" value={this.state.year} onChange={this.onChangeYear}/>
+        <input type="text" className="form-control col-md-3"placeholder="Enter year"  value={this.state.year} onChange={this.onChangeYear}/>
         <br/><br></br>
-        <input type="submit" value="Submit" />
+        <input type="submit" class="btn btn-primary" value="Submit" />
       </form>
 
         </div>
         )
     }
     else{
-        // const {movies}=this.state
-        // return
-        // (
-        //     <h1>genre movies</h1>
-        // )
-        const {movies,value}=this.state
-        return(
-            <div style={{marginLeft:"20px"}}>
-
-        <h1>Movies:</h1>
-
-        <   input  class="btn btn-primary" type="reset" value="Reset Filter" onClick={this.onButtonClicked}></input>
-                <br/>
-                <br/>
-            {movies.map(item => 
-                <div className="key" >
-                <img src={"http://image.tmdb.org/t/p/w185/"+item.poster_path}/>
-                <br/>
-                <br/>
-                <div className="col">
-                <h6>Title: {item.title}</h6>
-                <h6>Release Date:{item.release_date}</h6>
-            <h6>Overview:{item.overview}</h6>
-            <h6>Popularity:{item.popularity}</h6>
-            <h6>Vote Average:{item.vote_average}</h6>
-            {/* <h6>Adult:</h6><p>{item.adult}</p> */}
-                </div>
-               
-                
-            <hr style={{borderWidth:"10px",width:"95%"}}></hr>
-</div>)}
-<input  class="btn btn-primary" type="reset" value="Reset Filter" onClick={this.onButtonClicked}></input>
-                <br/>
-                <br/>
-</div>
-                
+        if(this.state.movies.length>0)
+        {
+            const {movies,value}=this.state
+            return(
+                <div style={{marginLeft:"20px"}}>
+                    <h1>Movies:</h1>
+                    <input  class="btn btn-primary" type="reset" value="Reset Filter" onClick={this.onButtonClicked}></input>
+                    <br/>
+                    <br/>
+                    {movies.map(item => 
+                        <div className="key" >
+                        <img src={"http://image.tmdb.org/t/p/w185/"+item.poster_path}/>
+                        <br/>
+                        <br/>
+                        <div className="col">
+                        <h6>Title: {item.title}</h6>
+                        <h6>Release Date:{item.release_date}</h6>
+                        <h6>Overview:{item.overview}</h6>
+                        <h6>Popularity:{item.popularity}</h6>
+                        <h6>Vote Average:{item.vote_average}</h6>
+                        </div>
+                        <hr style={{borderWidth:"10px",width:"95%"}}></hr>
+                    </div>)}
+                        <input  class="btn btn-primary" type="reset" value="Reset Filter" onClick={this.onButtonClicked}></input>
+                        <br/>
+                        <br/>
+                </div>             
         )
+       }
+       else
+        {
+            return(
+                <div>
+                        <br/>
+                        <h4 styles={{fontStyle:"italic"}}>No Records found </h4>
+                        <br/>
+                        <input class="btn btn-primary" type="reset" value="Reset Filter"  onClick={this.onButtonClicked}></input>
+                        <br/>
+                        <br/>
+                </div>   
+
+            )
+        }
     }
     }
 }

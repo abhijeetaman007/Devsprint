@@ -1,3 +1,5 @@
+//Refer server->README.md for viewing all routes and their working 
+
 const express=require('express')
 const router=express();
 
@@ -20,8 +22,6 @@ router.post('/add',async (req,res)=>{
         language:req.body.language,
         country:req.body.country,
         awards:req.body.awards,
-        //poster:req.body.poster,
-        //type:req.body.type,
         ImdbID:req.body.ImdbID,
         
     })
@@ -34,7 +34,7 @@ router.post('/add',async (req,res)=>{
     }
 })
 
-//To view all movies of db
+//To view all movies of db (connected to frontend)
 router.get('/view/all',async (req,res)=>{
     try{
         const viewmovie=await movies.find()
@@ -55,7 +55,7 @@ router.get('/view/title/:title',async(req,res)=>{
         res.json({message: err})
     }
 })
-//To view movie using imdbID
+//To view movie using imdbID (connected to frontend)
 router.get('/view/imdbid/:imdbid',async(req,res)=>{
     try{
         const viewmovie= await movies.find({ImdbID:req.params.imdbid})
@@ -66,7 +66,7 @@ router.get('/view/imdbid/:imdbid',async(req,res)=>{
     }
 })
 
-//Filter movies by Genre
+//Filter movies by Genre (connected to frontend)
 router.get('/genre/:genretype',async(req,res)=>{
     try{
         const genrefound= await movies.find({genre:req.params.genretype})
@@ -77,7 +77,7 @@ router.get('/genre/:genretype',async(req,res)=>{
     }
 })
 
-//Filter movies by year
+//Filter movies by year (connected to frontend)
 router.get('/year/:year',async(req,res)=>{
     try{
         const movieyearfound= await movies.find({year:req.params.year})
@@ -88,7 +88,7 @@ router.get('/year/:year',async(req,res)=>{
     }
 })
 
-//Filter movies by Rated type
+//Filter movies by Rated type (connected to frontend)
 router.get('/rated/:rated',async(req,res)=>{
     try{
         const moviefound= await movies.find({rated:req.params.rated})
@@ -151,11 +151,7 @@ router.patch('/update/:title',async (req,res)=>{
                 language:req.body.language,
                 country:req.body.country,
                 awards:req.body.awards,
-                //Type:req.body.type,
                 ImdbID:req.body.ImdbID,
-                //Likes:req.body.likes,
-                //Dislikes:req.body.dislikes,
-                //Totalviews:req.body.totalviews
             },
         })
         res.json(updatedmovie)

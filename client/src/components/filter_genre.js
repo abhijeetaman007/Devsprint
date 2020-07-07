@@ -1,4 +1,4 @@
-//Filtering Movies by genre
+//Filtering Added Movies by genre
 import React, { Component } from 'react'
 import axios from 'axios';
 
@@ -56,7 +56,6 @@ class filtergenre extends Component {
         if(!this.state.present){
         return (
             <div style={{fontSize:"15px"}} >
-                {/* <h3>Filter added movies</h3> */}
                 <form onSubmit={this.onSubmit}>
                 <div className="form-group col-md-3"> 
                         <label>Genre: </label>

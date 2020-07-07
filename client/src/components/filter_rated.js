@@ -1,4 +1,4 @@
-//Filtering Movies by rated
+//Filtering Added Movies by rated
 import React, { Component } from 'react'
 import axios from 'axios';
 
@@ -9,8 +9,8 @@ class filterrated extends Component {
     
         this.state = {
             movies:[],
-             rated:'',
-             present:false
+            rated:'',
+            present:false
         }
     }
 
@@ -53,7 +53,6 @@ class filterrated extends Component {
         if(!this.state.present){
         return (
             <div>
-                {/* <h3>Filter added movies</h3> */}
                 <form onSubmit={this.onSubmit}>
                 <div className="form-group col-md-3"> 
                         <label>Rated: </label>

@@ -1,7 +1,6 @@
 //Filtering Movies by year
 import React, { Component } from 'react'
 import axios from 'axios';
-// import Filtergenre from './filter_genre'
 
 class filter extends Component {
      
@@ -10,11 +9,10 @@ class filter extends Component {
     
         this.state = {
             movies:[],
-             year:'',
-             present:false
+            year:'',
+            present:false
         }
-        // this.onChangeYear=this.onChangeYear.bind(this)
-        // this.onSubmit=this.onChangeYear.bind(this)
+        
     }
 
     onChangeYear=(e)=>{
@@ -36,7 +34,6 @@ class filter extends Component {
             })
             this.setState({
                 present: true,
-                //year:''
             })
 
             
@@ -59,7 +56,6 @@ class filter extends Component {
         if(!this.state.present){
         return (
             <div>
-                {/* <h3>Filter added movies</h3> */}
                 <form onSubmit={this.onSubmit}>
                 <div className="form-group col-md-3"> 
                         <label>Year: </label>
@@ -73,8 +69,6 @@ class filter extends Component {
                         <input type="submit" value="Show Movies" className="btn btn-primary" style={{marginLeft:"100px"}}/>
                     </div>
                 </form>
-                {/* <Filtergenre/> */}
-                
             </div>
         )
         
@@ -103,7 +97,6 @@ class filter extends Component {
                     <h5>Imdb ID:{item.ImdbID}</h5>
                 <hr style={{borderWidth:"10px",width:"95%"}}></hr>
              </div>)}          
-                            {/* <button type="button" class="btn btn-outline-primary" onClick={this.onButtonClicked}>Reset Filter</button> */}
                         <input class="btn btn-primary" type="reset" value="Reset Filter"  onClick={this.onButtonClicked}></input>                    
                         <br/>
                         <br/>

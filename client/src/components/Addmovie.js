@@ -1,3 +1,4 @@
+//Add new movie
 import React, { Component } from 'react';
 import axios from 'axios';
 
@@ -19,8 +20,6 @@ export default class Addmovie extends Component {
         this.onChangeMovieLanguage = this.onChangeMovieLanguage.bind(this);
         this.onChangeMovieCountry = this.onChangeMovieCountry.bind(this);
         this.onChangeMovieAwards = this.onChangeMovieAwards.bind(this);
-        //this.onChangeMoviePoster = this.onChangeMoviePoster.bind(this);
-      //  this.onChangeMovieType = this.onChangeMovieType.bind(this);
         this.onChangeMovieImdbID = this.onChangeMovieImdbID.bind(this);
         
 
@@ -40,8 +39,6 @@ export default class Addmovie extends Component {
             language:'',
             country:'',
             awards:'',
-          //  poster:'',
-            //type:'',
             ImdbID:'',
         }
     }
@@ -111,16 +108,6 @@ export default class Addmovie extends Component {
             awards: e.target.value
         });
     }
-    // onChangeMoviePoster(e) {
-    //     this.setState({
-    //         poster: e.target.value
-    //     });
-    // }
-    // onChangeMovieType(e) {
-    //     this.setState({
-    //         type: e.target.value
-    //     });
-    // }
     onChangeMovieImdbID(e) {
         this.setState({
             ImdbID: e.target.value
@@ -149,8 +136,6 @@ export default class Addmovie extends Component {
             language: this.state.language,
             country: this.state.country,
             awards: this.state.awards,
-           // poster: this.state.poster,
-            //type: this.state.type,
             ImdbID: this.state.ImdbID,
           };
         
@@ -172,8 +157,6 @@ export default class Addmovie extends Component {
             language:'',
             country:'',
             awards:'',
-            //poster:'',
-            //type:'',
             ImdbID:'',
 
         })
@@ -259,11 +242,6 @@ export default class Addmovie extends Component {
                     </div>
                     <div className="form-group col-md-12"> 
                         <label>Plot: </label>
-                        {/* <input  type="text"
-                                className="form-control"
-                                value={this.state.plot}
-                                onChange={this.onChangeMoviePlot}
-                                /> */}
                                 <textarea class="form-control"  rows="3" value={this.state.plot} onChange={this.onChangeMoviePlot} ></textarea>
                     </div>
                     <div className="form-group form-group col-md-3"> 
@@ -273,7 +251,6 @@ export default class Addmovie extends Component {
                                 value={this.state.language}
                                 onChange={this.onChangeMovieLanguage}
                                 />
-                                {/* <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" value={this.state.language} onChange={this.onChangeMovieLanguage} ></textarea> */}
                     </div>
                     <div className="form-group form-group col-md-3"> 
                         <label>Country: </label>
@@ -291,22 +268,6 @@ export default class Addmovie extends Component {
                                 onChange={this.onChangeMovieAwards}
                                 />
                     </div>
-                    {/* <div className="form-group"> 
-                        <label>Poster: </label>
-                        <input  type="text"
-                                className="form-control"
-                                value={this.state.poster}
-                                onChange={this.onChangeMoviePoster}
-                                />
-                    </div> */}
-                    {/* <div className="form-group"> 
-                        <label>Type: </label>
-                        <input  type="text"
-                                className="form-control"
-                                value={this.state.type}
-                                onChange={this.onChangeMovieType}
-                                />
-                    </div> */}
                     <div className="form-group form-group col-md-3"> 
                         <label>Imdb ID: </label>
                         <input  type="text"
@@ -315,7 +276,6 @@ export default class Addmovie extends Component {
                                 onChange={this.onChangeMovieImdbID}
                                 />
                     </div>
-                    
                     <div className="form-group">
                         <input type="submit" value="Add Movie" className="btn btn-primary" />
                     </div>
