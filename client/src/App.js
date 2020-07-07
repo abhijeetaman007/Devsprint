@@ -8,6 +8,7 @@ import Viewallmovies from "./components/Viewallmovies"
 // import filtergenre from "./components/filter_genre"
 import Filter from "./components/filterall"
 import Filterapi from "./components/filter_api"
+import Filterapi_1 from "./components/filter_api_1"
 import './style.css'
 
 class App extends Component {
@@ -35,7 +36,10 @@ class App extends Component {
                 <Link to="/filter/genre" className="nav-link" style={{fontFamily:"Helvetica",color:"white"}}>FILTER ADDED MOVIES BY GENRE</Link>
               </li> */}
               <li className="nav-item" class="key">
-                <Link to="/filterapi" className="nav-item nav-link" href="#" style={{fontFamily:"Helvetica",color:"white"}}>FILTER MOVIES</Link>
+                <Link to="/filterapi_1" className="nav-item nav-link" href="#" style={{fontFamily:"Helvetica",color:"white"}}>VIEW BEST OF ALL TIME</Link>
+              </li>
+              <li className="nav-item" class="key">
+                <Link to="/filterapi" className="nav-item nav-link" href="#" style={{fontFamily:"Helvetica",color:"white"}}>FILTER MOVIES BY DATES</Link>
               </li>
               <li className="navbar-item" class="key">
                 <Link to="/create" className="nav-item nav-link" href="#" style={{fontFamily:"Helvetica",color:"white"}}>ADD YOUR MOVIES</Link>
@@ -60,6 +64,7 @@ class App extends Component {
         <Route path="/viewall" component={Viewallmovies}/>
         <Route path="/filter" component={Filter}/>
         <Route path="/filterapi" component={Filterapi}/>
+        <Route path="/filterapi_1" component={Filterapi_1}/>
         {/* <Route path="/filter/year" component={filter_year}/>
         <Route path="/filter/genre" component={filtergenre}/> */}
       </div>
