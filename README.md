@@ -1,5 +1,5 @@
 # MOViE @ eASE
-# Movie Management and Recommendation System
+```Movie Management and Recommendation System```
 
 # App Features
 
