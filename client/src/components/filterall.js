@@ -8,7 +8,7 @@ export class filterall extends Component {
     render() {
         return (
             <div style={{marginLeft:"20px"}} >
-                <h4 style={{marginLeft:"20px"}} >Filter Added Movies</h4>
+                <h3 style={{marginLeft:"20px"}} >Filter Added Movies</h3>
                 <br></br>
                 <br></br>
                 <Filteryear /> 

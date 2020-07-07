@@ -92,12 +92,12 @@ export class filter_api extends Component {
           </select>
         </label>
         <br/> */}
-        <label>From:</label>
+        <label ><h3>From Date:</h3></label>
         <input type="text" className="form-control col-md-3"placeholder="Enter initial date" value={this.state.from} onChange={this.onChangeFrom}/>
         <small>*Please enter date in YYYY-MM-DD format eg.2014-09-15</small>
         <br/>
         <br/>
-        <label>To:</label>
+        <label><h3>To Date:</h3></label>
         <input type="text" className="form-control col-md-3" placeholder="Enter final date" value={this.state.to} onChange={this.onChangeTo}/>
         <small>*Please enter date in YYYY-MM-DD format eg.2014-10-15</small>
         <br/>

@@ -53,7 +53,7 @@ export default class Viewallmovies extends Component {
 
     render() {
         return (
-            <div>
+            <div style={{margin:"20px"}}>
                 <h3>All Added Movies</h3>
                 <table className="table table-striped"  style={{marginTop:20}}>
                     <thead>

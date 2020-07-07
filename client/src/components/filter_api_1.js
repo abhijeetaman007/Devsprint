@@ -58,7 +58,8 @@ export class filter_api_1 extends Component {
             <div style={{marginLeft:"20px"}}>
                     <form onSubmit={this.handleSubmit}>
         <label>
-           <h4>Best</h4>
+          <h3>Filter by genre and year</h3>
+          <br></br>
           <select value={this.state.value} onChange={this.handleChange}>
             <option selected value="Select">Select Genre</option>
             <option value="28">Action</option>
@@ -82,9 +83,10 @@ export class filter_api_1 extends Component {
             <option value="37">Western</option>
           </select>
         {/* </label> */}
-        <h4>movies of</h4></label>
+        <br></br><br></br>
+        </label>
         <input type="text" className="form-control col-md-3"placeholder="Enter year" value={this.state.year} onChange={this.onChangeYear}/>
-        <br/>
+        <br/><br></br>
         <input type="submit" value="Submit" />
       </form>
 
