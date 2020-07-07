@@ -70,7 +70,7 @@ class filter extends Component {
                                 />
                     </div>
                     <div className="form-group">
-                        <input type="submit" value="Show Movies" className="btn btn-primary" />
+                        <input type="submit" value="Show Movies" className="btn btn-primary" style={{marginLeft:"100px"}}/>
                     </div>
                 </form>
                 {/* <Filtergenre/> */}

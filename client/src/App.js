@@ -25,7 +25,7 @@ class App extends Component {
             <ul className="navbar-nav mr-auto">
 
               <li className="navbar-item" class="key"> 
-                <Link to="/" className="nav-item nav-link" href="#" style={{fontFamily:"Helvetica",color:"white"}}>HOME</Link>
+                <Link to="/" className="nav-item nav-link" href="#" style={{fontFamily: 'Bangers',fontSize:"1rem"}} >HOME</Link>
               </li>
 
               
@@ -36,19 +36,19 @@ class App extends Component {
                 <Link to="/filter/genre" className="nav-link" style={{fontFamily:"Helvetica",color:"white"}}>FILTER ADDED MOVIES BY GENRE</Link>
               </li> */}
               <li className="nav-item" class="key">
-                <Link to="/filterapi_1" className="nav-item nav-link" href="#" style={{fontFamily:"Helvetica",color:"white"}}>VIEW BEST OF ALL TIME</Link>
+                <Link to="/filterapi_1" className="nav-item nav-link" href="#" style={{fontFamily: 'Bangers',fontSize:"1rem"}} >VIEW BEST OF ALL TIME</Link>
               </li>
               <li className="nav-item" class="key">
-                <Link to="/filterapi" className="nav-item nav-link" href="#" style={{fontFamily:"Helvetica",color:"white"}}>FILTER MOVIES BY DATES</Link>
+                <Link to="/filterapi" className="nav-item nav-link" href="#" style={{fontFamily: 'Bangers',fontSize:"1rem"}} >FILTER MOVIES BY DATES</Link>
               </li>
               <li className="navbar-item" class="key">
-                <Link to="/create" className="nav-item nav-link" href="#" style={{fontFamily:"Helvetica",color:"white"}}>ADD YOUR MOVIES</Link>
+                <Link to="/create" className="nav-item nav-link" href="#" style={{fontFamily: 'Bangers',fontSize:"1rem"}} >ADD YOUR MOVIES</Link>
               </li>
               <li className="nav-item" class="key">
-                <Link to="/filter" className="nav-item nav-link" href="#" style={{fontFamily:"Helvetica",color:"white"}}>FILTER ADDED MOVIES</Link>
+                <Link to="/filter" className="nav-item nav-link" href="#" style={{fontFamily: 'Bangers',fontSize:"1rem"}} >FILTER ADDED MOVIES</Link>
               </li>
               <li className="nav-item" class="key">
-                <Link to="/viewall" className="nav-item nav-link" href="#" style={{fontFamily:"Helvetica",color:"white"}}>VIEW ALL ADDED MOVIES</Link>
+                <Link to="/viewall" className="nav-item nav-link" href="#" style={{fontFamily: 'Bangers',fontSize:"1rem"}} >VIEW ALL ADDED MOVIES</Link>
               </li>
               
             </ul>

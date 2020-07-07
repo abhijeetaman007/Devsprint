@@ -55,7 +55,7 @@ class filtergenre extends Component {
     render() {
         if(!this.state.present){
         return (
-            <div>
+            <div style={{fontSize:"15px"}} >
                 {/* <h3>Filter added movies</h3> */}
                 <form onSubmit={this.onSubmit}>
                 <div className="form-group col-md-3"> 
@@ -67,7 +67,7 @@ class filtergenre extends Component {
                                 />
                     </div>
                     <div className="form-group">
-                        <input type="submit" value="Show Movies" className="btn btn-primary" />
+                        <input type="submit" value="Show Movies" className="btn btn-primary" style={{marginLeft:"100px"}}/>
                     </div>
                 </form>
             </div>
