@@ -7,7 +7,6 @@ export class delete_movies extends Component {
     
         this.state = {
             todelete:'',
-           // present: false
         }
     }
     onChangeDelete=(e)=>{
@@ -18,12 +17,15 @@ export class delete_movies extends Component {
     onSubmit=(e)=>{
         e.preventDefault()
         if(window.confirm('Are you sure?'))
-        axios.delete('http://localhost:7000/movies/delete/title/'+this.state.todelete)
-        this.setState({
-            todelete:'',
-            //present: true
-        })
-        window.alert('Movie Deleted')
+        {
+            axios.delete('http://localhost:7000/movies/delete/title/'+this.state.todelete)
+            this.setState({
+                todelete:'',
+            })
+            window.alert('Movie Deleted')
+        }
+        
+        
     }
     
     render() {
@@ -35,6 +37,7 @@ export class delete_movies extends Component {
                         <label>Enter Title of Movie </label>
                         <input  type="text"
                                 className="form-control"
+                                placeholder="Enter title of the movie to be deleted"
                                 value={this.state.todelete}
                                 onChange={this.onChangeDelete}
                                 />
