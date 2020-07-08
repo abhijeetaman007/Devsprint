@@ -11,6 +11,7 @@ Filter movies within range of dates<br>
 Adding movies possible from frontend.<br>
 **Can filter added movies by year,genre,rating and ImdbID<br>
 Can view all added movies<br>
+Can delete added movies as well<br>
 
 # Problem Statement
 
