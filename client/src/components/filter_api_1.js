@@ -117,7 +117,7 @@ export class filter_api_1 extends Component {
                         </div>
                         <hr style={{borderWidth:"10px",width:"95%"}}></hr>
                     </div>)}
-                        <input  class="btn btn-primary" type="reset" value="Reset Filter" onClick={this.onButtonClicked}></input>
+                        <input  class="btn btn-primary" type="reset" value="Reset Filter"  onClick={this.onButtonClicked}></input>
                         <br/>
                         <br/>
                 </div>             

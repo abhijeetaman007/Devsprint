@@ -7,6 +7,7 @@ import Viewallmovies from "./components/Viewallmovies"
 import Filter from "./components/filterall"
 import Filterapi from "./components/filter_api"
 import Filterapi_1 from "./components/filter_api_1"
+import Delete from "./components/delete_movies"
 import './style.css'
 
 class App extends Component {
@@ -40,7 +41,9 @@ class App extends Component {
               <li className="nav-item" class="key">
                 <Link to="/viewall" className="nav-item nav-link" href="#" style={{fontFamily: 'Bangers',fontSize:"1rem"}} >VIEW ALL ADDED MOVIES</Link>
               </li>
-              
+              <li className="nav-item" class="key">
+                <Link to="/delete" className="nav-item nav-link" href="#" style={{fontFamily: 'Bangers',fontSize:"1rem"}} >DELETE YOUR MOVIES</Link>
+              </li>
             </ul>
             
           </div>
@@ -54,6 +57,7 @@ class App extends Component {
         <Route path="/filter" component={Filter}/>
         <Route path="/filterapi" component={Filterapi}/>
         <Route path="/filterapi_1" component={Filterapi_1}/>
+        <Route path="/delete" component={Delete}/>
       </div>
     </Router>
   );

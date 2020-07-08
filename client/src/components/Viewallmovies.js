@@ -19,6 +19,7 @@ const Movie = props =>(             //Single Row in a table
         <td>{props.movie.country}</td>
         <td>{props.movie.awards}</td>
         <td>{props.movie.ImdbID}</td>
+
     </tr>
 )
 
@@ -47,7 +48,7 @@ export default class Viewallmovies extends Component {
             return <Movie movie={currmovie} key={i} />
         })
     }
-
+   
     render() {
         return (
             <div style={{margin:"20px"}}>
@@ -72,7 +73,8 @@ export default class Viewallmovies extends Component {
                         </tr>
                     </thead>
                     <tbody>
-                        {this.movielist()}   
+                         {this.movielist()} 
+
                     </tbody>
                 </table>
             </div>

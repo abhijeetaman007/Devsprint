@@ -66,7 +66,7 @@ class filtergenre extends Component {
                                 />
                     </div>
                     <div className="form-group">
-                        <input type="submit" value="Show Movies" className="btn btn-primary" style={{marginLeft:"100px"}}/>
+                        <input type="submit" value="Show Movies" className="btn btn-primary" style={{marginLeft:"165px"}}/>
                     </div>
                 </form>
             </div>

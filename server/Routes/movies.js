@@ -121,7 +121,7 @@ router.delete('/delete/movieid/:movieid',async(req,res)=>{
     }
 })
 
-//To delete a movie using its title
+//To delete a movie using its title(connected to frontend)
 router.delete('/delete/title/:title',async(req,res)=>{
     try{
         const deltedmovie= await movies.deleteOne({title:req.params.title})
