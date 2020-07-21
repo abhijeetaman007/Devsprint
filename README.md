@@ -19,3 +19,7 @@ Can delete added movies as well<br>
 **Filtering movies according to a given criteria.<br>
 **Details about all the movie.<br>
 
+## Contributors
+
+Abhijeet 
+Rhea
