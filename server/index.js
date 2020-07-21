@@ -4,9 +4,9 @@ const mongoose=require('mongoose')
 const bodyparser=require('body-parser')
 const moviesroute=require('./Routes/movies')
 const fetchmoviesroute=require('./Routes/fetchmovie')
-const cors = require('cors');
+// const cors = require('cors');
 
-app.use(cors());
+// app.use(cors());
 
 //Middleware-to get post request body in Json
 app.use(bodyparser.json())
@@ -30,6 +30,6 @@ app.use('/movies',moviesroute)
 app.use('/fetchmovies',fetchmoviesroute)
 
 //Listening at post 7000
-app.listen(7000,()=>{
-    console.log("Server is up and running at port 7000")
+app.listen(6000,()=>{
+    console.log("Server is up and running at port 6000")
 })

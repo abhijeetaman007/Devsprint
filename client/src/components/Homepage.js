@@ -85,10 +85,29 @@ export default class Homepage extends Component {
       <div>
       {this.state.currmovie==null?
       <div>
-      <Searchmovie handleSubmit={this.handleSubmit} handleChange={this.handleChange}/>
-      <Upcoming handleUpcoming={this.handleUpcoming}/>
-      <NowPlaying handleNowplaying={this.handleNowplaying}/>
-      <TopRated handleToprated={this.handleToprated}/>
+        <table>
+          <tr>
+            <td>
+            <Upcoming handleUpcoming={this.handleUpcoming}/>
+            </td>
+            <td>
+            <NowPlaying handleNowplaying={this.handleNowplaying}/>
+            </td>
+            <td>
+            <TopRated handleToprated={this.handleToprated}/>
+            </td>
+            <td>
+            <Searchmovie handleSubmit={this.handleSubmit} handleChange={this.handleChange}/>
+            </td>
+            </tr>
+             
+            </table>
+        <br></br>
+        <br></br>
+      
+      
+      
+      
       <Movielist movieInfo={this.movieInfo} movies={this.state.moviesData} />
       {this.state.totalResults>20?<Pagination pages={numberPages} nextPage={this.nextPage} currentPage={this.state.currentPage}/>:""}
       </div>
