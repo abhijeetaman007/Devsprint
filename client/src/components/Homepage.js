@@ -11,47 +11,52 @@ export default class Homepage extends Component {
   constructor(props) {
     super(props);
     this.state = {
+      //array to store data
       moviesData: [],
+      //when form submit searchterm updates
       searchTerm:"",
+      //when viewdetials clicked currmovie!=null
       currmovie:null,
+      //no.of movies
       totalResults:0,
+      //page
       currentPage:1
     };
-  }  
+  } 
+
   handleSubmit = (e) => { 
     fetch(`https://api.themoviedb.org/3/search/movie?api_key=de6b4672f86ff0807b144f81ff753824&query=${this.state.searchTerm}`)
     .then(data => data.json())
     .then(data => {
       this.setState({ moviesData: [...data.results],totalResults:data.total_results})
     })
-    
     e.preventDefault()
   }
+
   handleUpcoming = (e) => { 
     fetch(`https://api.themoviedb.org/3/movie/upcoming?api_key=de6b4672f86ff0807b144f81ff753824&language=en-US&page=1`)
     .then(data => data.json())
     .then(data => {
-      this.setState({ moviesData: [...data.results]})
+      this.setState({ moviesData: [...data.results],searchTerm:null})
     })
-    
     e.preventDefault()
   }
+
   handleNowplaying = (e) => { 
     fetch(`https://api.themoviedb.org/3/movie/now_playing?api_key=de6b4672f86ff0807b144f81ff753824&language=en-US&page=1`)
     .then(data => data.json())
     .then(data => {
-      this.setState({ moviesData: [...data.results]})
+      this.setState({ moviesData: [...data.results],searchTerm:null})
     })
-    
     e.preventDefault()
   }
+
   handleToprated= (e) => { 
     fetch(`https://api.themoviedb.org/3/movie/top_rated?api_key=de6b4672f86ff0807b144f81ff753824&language=en-US&page=1`)
     .then(data => data.json())
     .then(data => {
-      this.setState({ moviesData: [...data.results]})
+      this.setState({ moviesData: [...data.results],searchTerm:null})
     })
-    
     e.preventDefault()
   }
   
@@ -66,6 +71,7 @@ export default class Homepage extends Component {
     const newmovie=chosenmovie.length>0?chosenmovie[0]:null;
     this.setState({currmovie:newmovie})
   }
+
   goBack=()=>{
     this.setState({currmovie:null})
   }
@@ -80,10 +86,13 @@ export default class Homepage extends Component {
   
   }
   render() {
+    //fit 20 movies in 1 page(API has lots and lots of movies )
     const numberPages=Math.floor(this.state.totalResults/20);
+
     return (    
       <div>
       {this.state.currmovie==null?
+      //true
       <div>
         <table>
           <tr>
@@ -104,14 +113,12 @@ export default class Homepage extends Component {
             </table>
         <br></br>
         <br></br>
-      
-      
-      
-      
       <Movielist movieInfo={this.movieInfo} movies={this.state.moviesData} />
-      {this.state.totalResults>20?<Pagination pages={numberPages} nextPage={this.nextPage} currentPage={this.state.currentPage}/>:""}
+      {this.state.totalResults>20&&this.state.searchTerm!=null?<Pagination pages={numberPages} nextPage={this.nextPage} currentPage={this.state.currentPage}/>:""}
       </div>
-      :<Moviedetails currmovie={this.state.currmovie} goBack={this.goBack}/>}
+      :
+      //false
+      <Moviedetails currmovie={this.state.currmovie} goBack={this.goBack}/>}
       </div>
       
       
