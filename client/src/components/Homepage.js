@@ -113,9 +113,11 @@ export default class Homepage extends Component {
             </table>
         <br></br>
         <br></br>
+      
       <Movielist movieInfo={this.movieInfo} movies={this.state.moviesData} />
       {this.state.totalResults>20&&this.state.searchTerm!=null?<Pagination pages={numberPages} nextPage={this.nextPage} currentPage={this.state.currentPage}/>:""}
       </div>
+      //Pagination sent (props=pages,nextPage,currentPage to Pagination.js)if tot_res>20
       :
       //false
       <Moviedetails currmovie={this.state.currmovie} goBack={this.goBack}/>}
