@@ -21,5 +21,5 @@ Can delete added movies as well<br>
 
 ## Contributors
 
-Abhijeet 
-Rhea
+Abhijeet Sinha<br>
+Rhea Adhikari<br>
